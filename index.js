@@ -116,7 +116,7 @@ function sechedulePrayerTimes(hours, minutes){
 }
 
 let test_hours=[13,13]
-let test_minutes=[38,41]
+let test_minutes=[40,43]
 sechedulePrayerTimes(test_hours,test_minutes);
 
 //let cron=schedule.scheduleJob("*/3 * * * * *", function() {
