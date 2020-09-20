@@ -1,0 +1,32 @@
+{
+  "name": "prayer-times-api",
+  "version": "0.0.1",
+  "description": "Node Library Api to calculate prayer times",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eljoujat/prayer-times-api.git"
+  },
+  "keywords": [
+    "Prayer",
+    "times",
+    "adhan",
+    "salat",
+    "islam;",
+    "religion"
+  ],
+  "author": "Youssef El Jaoujat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eljoujat/prayer-times-api/issues"
+  },
+  "homepage": "https://github.com/eljoujat/prayer-times-api#readme",
+  "dependencies": {
+    "node-schedule": "^1.3.2",
+    "castv2-client": "1.2.0",
+    "google-tts-api": "0.0.4"
+  }
+}
