@@ -22,25 +22,17 @@ let App = {
         client.connect(host, function () {
             client.launch(DefaultMediaReceiver, function (err, player) {
                 let media = {
-                    contentId: url,
+                    contentId: "https://s3.eu-west-3.amazonaws.com/azanaudio/136_uP_bY_mUSLEm.Ettounssi.mp3",
                     contentType: 'audio/mp3',
                     streamType: 'BUFFERED'
                 };
                 App.Player = player;
                 App.Player.load(media, { autoplay: true }, function (err, status) {
                     App.Player.on('status', function (status) {
-                        if (status.playerState == "IDLE" && App.playin == false) {
+                        if (status.playerState === "IDLE" && App.playin === false) {
                             App.Player.stop();
-                            App.playin = true;
-                            let mediaAmazonDoesNotPush = {
-                                contentId: "https://s3.eu-west-3.amazonaws.com/azanaudio/136_uP_bY_mUSLEm.Ettounssi.mp3",
-                                contentType: 'audio/mp3',
-                                streamType: 'BUFFERED'
-                            };
-                            App.Player.load(mediaAmazonDoesNotPush, { autoplay: true }, function (err, status) {
-                                callback('Pushed Audio');
-                                client.close();
-                            });
+                            client.close();
+                            App.playin = false;
                         }
                     });
                 });
@@ -124,5 +116,5 @@ function sechedulePrayerTimes(hours, minutes){
 }
 
 let test_hours=[12,12]
-let test_minutes=[10,15]
+let test_minutes=[55,59]
 sechedulePrayerTimes(test_hours,test_minutes);
