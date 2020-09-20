@@ -22,7 +22,7 @@ let App = {
         client.connect(host, function () {
             client.launch(DefaultMediaReceiver, function (err, player) {
                 let media = {
-                    contentId: "https://s3.eu-west-3.amazonaws.com/azanaudio/136_uP_bY_mUSLEm.Ettounssi.mp3",
+                    contentId: "http://bbcsfx.acropolis.org.uk/assets/07074116.wav",
                     contentType: 'audio/mp3',
                     streamType: 'BUFFERED'
                 };
@@ -117,4 +117,9 @@ function sechedulePrayerTimes(hours, minutes){
 
 let test_hours=[12,12]
 let test_minutes=[55,59]
-sechedulePrayerTimes(test_hours,test_minutes);
+//sechedulePrayerTimes(test_hours,test_minutes);
+
+
+let event = schedule.scheduleJob("*/10 * * * * *", function() {
+    App.run("192.168.0.17", "It's time for Salat Ichaa  ");
+});
