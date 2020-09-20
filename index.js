@@ -117,12 +117,12 @@ function sechedulePrayerTimes(hours, minutes){
         rule.minute = minutes[i];
 
         let j = schedule.scheduleJob(rule, function(){
-            //App.run("192.168.0.17", "It's time for Salat Ichaa  ");
-            console.log(" Salam")
+            App.run("192.168.0.17", "It's time for Salat Ichaa  ");
+            console.log(" First adhan")
         });
     }
 }
 
 let test_hours=[12,12]
-let test_minutes=[7,15]
+let test_minutes=[9,10]
 sechedulePrayerTimes(test_hours,test_minutes);
