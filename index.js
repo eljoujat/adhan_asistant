@@ -124,5 +124,5 @@ function sechedulePrayerTimes(hours, minutes){
 }
 
 let test_hours=[12,12]
-let test_minutes=[9,10]
+let test_minutes=[10,15]
 sechedulePrayerTimes(test_hours,test_minutes);
