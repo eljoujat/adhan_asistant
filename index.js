@@ -115,8 +115,10 @@ function sechedulePrayerTimes(hours, minutes){
     }
 }
 
+let test_hours=[14,14];
+let test_minutes=[0,3];
+sechedulePrayerTimes(test_hours,test_minutes);
 
-sechedulePrayerTimes(hours,minutes);
 
 
 
