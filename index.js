@@ -116,10 +116,10 @@ function sechedulePrayerTimes(hours, minutes){
 }
 
 let test_hours=[13,13]
-let test_minutes=[19,22]
-//sechedulePrayerTimes(test_hours,test_minutes);
+let test_minutes=[38,41]
+sechedulePrayerTimes(test_hours,test_minutes);
 
-let cron=schedule.scheduleJob("*/3 * * * * *", function() {
-    console.log("running a task every 3 second ,  now is "+new Date().getSeconds()+" seconds");
-});
+//let cron=schedule.scheduleJob("*/3 * * * * *", function() {
+  //  console.log("running a task every 3 second ,  now is "+new Date().getSeconds()+" seconds");
+//});
 
